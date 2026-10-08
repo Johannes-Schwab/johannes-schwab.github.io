@@ -99,12 +99,6 @@ cite { font: italic 400 1.07em/1.4 var(--font-display); color: var(--ink); }
 .profiles a { display: inline-flex; align-items: center; gap: 8px; color: var(--ink-2); font-weight: 500; text-decoration: none; transition: color .2s; }
 .profiles a:hover { color: var(--navy); }
 .profiles .brand { color: var(--navy); }
-/* Affiliation logos: quiet grey, full colour on hover */
-.affiliations { display: flex; align-items: center; gap: 22px; padding-left: 28px; border-left: 1px solid var(--line-strong); }
-.affiliations a, .footer-logos a { display: block; line-height: 0; }
-.affiliations img { display: block; height: 17px; width: auto; filter: grayscale(1); opacity: .65; transition: filter .25s, opacity .25s; }
-.affiliations img.sfi { height: 23px; }
-.affiliations a:hover img { filter: none; opacity: 1; }
 .portrait { margin: 0; width: 100%; }
 .portrait img {
   display: block; width: 100%; height: auto; border-radius: 20px;
@@ -224,7 +218,7 @@ cite { font: italic 400 1.07em/1.4 var(--font-display); color: var(--ink); }
 /* --- Footer --------------------------------------------------------------- */
 .site-footer { background: var(--navy-deep); color: var(--on-navy-2); font-size: 0.92rem; }
 .site-footer .container { padding-top: 80px; padding-bottom: 40px; }
-.footer-grid { display: grid; grid-template-columns: 1.7fr 1fr 1fr; gap: 48px; padding-bottom: 56px; border-bottom: 1px solid rgba(255, 255, 255, .1); }
+.footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr auto; gap: 48px; padding-bottom: 56px; border-bottom: 1px solid rgba(255, 255, 255, .1); }
 .footer-grid .footer-name { font: 400 2rem/1.05 var(--font-display); letter-spacing: -0.02em; color: #fff; }
 .footer-grid .footer-about { margin-top: 14px; }
 .footer-grid .footer-label { margin-bottom: 14px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--on-navy-3); }
@@ -234,10 +228,14 @@ cite { font: italic 400 1.07em/1.4 var(--font-display); color: var(--ink); }
 .site-footer .icon { width: 0.8em; height: 0.8em; color: var(--on-navy-3); }
 .site-footer .brand { color: var(--on-navy-2); }
 .site-footer .footer-list a { gap: 10px; }
-.footer-logos { display: flex; align-items: center; gap: 26px; margin-top: 28px; }
-.footer-logos img { display: block; height: 17px; width: auto; filter: brightness(0) invert(1); opacity: .8; transition: opacity .2s; }
-.footer-logos img.sfi { height: 23px; }
-.footer-logos a:hover img { opacity: 1; }
+.footer-logos { display: grid; gap: 10px; }
+.site-footer .logo-tile {
+  display: grid; place-items: center; width: 104px; height: 44px; border-radius: 9px; background: var(--paper);
+  transition: transform .2s var(--ease), box-shadow .2s;
+}
+.site-footer .logo-tile:hover { transform: translateY(-2px); box-shadow: 0 12px 24px -14px rgba(0, 0, 0, .6); }
+.logo-tile img { display: block; width: auto; height: 14px; }
+.logo-tile img.sfi { height: 25px; }
 .footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding-top: 28px; font-size: 0.82rem; color: var(--on-navy-3); }
 
 /* --- Motion --------------------------------------------------------------- */
@@ -269,7 +267,6 @@ cite { font: italic 400 1.07em/1.4 var(--font-display); color: var(--ink); }
   .nav a { padding: 12px 0 14px; }
   .hero { padding: 56px 0 72px; }
   .section-head { flex-direction: column; align-items: flex-start; gap: 14px; margin-bottom: 32px; }
-  .affiliations { padding-left: 0; border-left: 0; }
   .section, .block { padding: 64px 0; }
   .block.compact { padding: 44px 0; }
   .page-head { padding: 64px 0 48px; }
@@ -279,6 +276,7 @@ cite { font: italic 400 1.07em/1.4 var(--font-display); color: var(--ink); }
   .kv dd { margin-bottom: 12px; }
   .award { grid-template-columns: 1fr; gap: 16px; padding: 32px 28px; }
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-logos { grid-auto-flow: column; justify-content: start; }
   .entry { grid-template-columns: 1fr; }
   .entry .when { grid-column: 1; grid-row: auto; }
 }
