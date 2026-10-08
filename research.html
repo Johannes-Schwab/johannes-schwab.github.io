@@ -21,7 +21,7 @@
 <body>
 <header class="topbar">
   <div class="topbar-inner">
-    <a class="brand" href="index.html"><span class="mono" aria-hidden="true">JS</span>Johannes Schwab</a>
+    <a class="brand" href="index.html">Johannes Schwab</a>
     <nav aria-label="Main">
       <a href="index.html">Home</a>
       <a href="research.html" aria-current="page">Research</a>
@@ -40,7 +40,8 @@
 
     <article class="paper">
       <h3><a href="https://arxiv.org/abs/2607.11889">Scaling Point-in-Time Language Models</a></h3>
-      <p class="authors"><span class="badge highlight">NeurIPS 2026</span>Bryan Kelly, Semyon Malamud, <strong>Johannes Schwab</strong> and Teng Andrea Xu</p>
+      <p class="authors">Bryan Kelly, Semyon Malamud, <strong>Johannes Schwab</strong> and Teng Andrea Xu</p>
+      <p class="venue"><em>Advances in Neural Information Processing Systems</em> (NeurIPS), 2026</p>
       <p class="summary">Shows that training decoder-only transformers of up to 4B parameters on 1T chronologically filtered tokens largely closes the performance gap between lookahead-free language models and their unconstrained counterparts.</p>
       <details>
         <summary>Abstract</summary>
@@ -55,24 +56,26 @@
 
     <article class="paper">
       <h3><a href="https://arxiv.org/abs/2505.11347">Training NTK to Generalize with KARE</a></h3>
-      <p class="authors"><span class="badge">2025</span><strong>Johannes Schwab</strong>, Bryan Kelly, Semyon Malamud and Teng Andrea Xu</p>
+      <p class="authors"><strong>Johannes Schwab</strong>, Bryan Kelly, Semyon Malamud and Teng Andrea Xu</p>
+      <p class="venue">Working paper, 2025 · SFI Research Paper 25-51</p>
       <p class="summary">Proposes optimizing the neural tangent kernel explicitly rather than implicitly through gradient descent, yielding kernels that match or outperform the deep networks they are derived from.</p>
       <details>
         <summary>Abstract</summary>
         <p>The performance of the data-dependent neural tangent kernel (NTK; Jacot et al. (2018)) associated with a trained deep neural network (DNN) often matches or exceeds that of the full network. This implies that DNN training via gradient descent implicitly performs kernel learning by optimizing the NTK. In this paper, we propose instead to optimize the NTK explicitly. Rather than minimizing empirical risk, we train the NTK to minimize its generalization error using the recently developed Kernel Alignment Risk Estimator (KARE; Jacot et al. (2020)). Our simulations and real data experiments show that NTKs trained with KARE consistently match or significantly outperform the original DNN and the DNN-induced NTK (the after-kernel). These results suggest that explicitly trained kernels can outperform traditional end-to-end DNN optimization in certain settings, challenging the conventional dominance of DNNs. We argue that explicit training of NTK is a form of over-parametrized feature learning.</p>
       </details>
-      <p class="meta"><a href="https://arxiv.org/abs/2505.11347">arXiv</a> · <a href="https://github.com/DjoFE2021/ntk-kare">Code</a> · SFI Research Paper 25-51</p>
+      <p class="meta"><a href="https://arxiv.org/abs/2505.11347">arXiv</a> · <a href="https://github.com/DjoFE2021/ntk-kare">Code</a></p>
     </article>
 
     <article class="paper">
       <h3><a href="https://www.nber.org/papers/w33565">A Test of the Efficiency of a Given Portfolio in High Dimensions</a></h3>
-      <p class="authors"><span class="badge">2025</span>Mikhail Chernov, Bryan Kelly, Semyon Malamud and <strong>Johannes Schwab</strong></p>
+      <p class="authors">Mikhail Chernov, Bryan Kelly, Semyon Malamud and <strong>Johannes Schwab</strong></p>
+      <p class="venue">Working paper, 2025 · SFI Research Paper 25-26</p>
       <p class="summary">Extends the Gibbons–Ross–Shanken test to settings where test assets far outnumber the sample, using random matrix theory to correct the bias induced by regularized covariance estimation.</p>
       <details>
         <summary>Abstract</summary>
         <p>We extend the Gibbons–Ross–Shanken test to high-dimensional cases, when the number of test assets far exceeds the sample size and the return covariance matrix is ill-conditioned or singular, as inevitably occurs with large, richly specified test portfolios. In such cases, one must use a regularized (and therefore biased) estimator of the covariance matrix, which distorts the original GRS test statistic. We use Random Matrix Theory to correct for this bias and characterize the asymptotic power of the resulting test. Power increases with the number of test assets and reaches its maximum across a broad range of local alternatives. These findings are supported by extensive simulations. We empirically implement the test on state-of-the-art candidate factor portfolios and test assets to evaluate conditional asset pricing performance.</p>
       </details>
-      <p class="meta"><a href="https://www.nber.org/papers/w33565">NBER Working Paper 33565</a> · <a href="https://github.com/DjoFE2021/CKMSEfficiencyTest">Code</a> · SFI Research Paper 25-26</p>
+      <p class="meta"><a href="https://www.nber.org/papers/w33565">NBER Working Paper 33565</a> · <a href="https://github.com/DjoFE2021/CKMSEfficiencyTest">Code</a></p>
     </article>
   </section>
 
@@ -89,20 +92,10 @@
 
 <footer class="site-footer">
   <div class="footer-inner">
-    <div>
-      <a class="brand" href="index.html"><span class="mono" aria-hidden="true">JS</span>Johannes Schwab</a>
-      <p>PhD candidate · EPFL &amp; Swiss Finance Institute</p>
-    </div>
-    <div>
-      <p class="footer-label">Contact</p>
-      <p><a href="mailto:johanneschwab@gmail.com">johanneschwab@gmail.com</a></p>
-    </div>
-    <div>
-      <p class="footer-label">Profiles</p>
-      <p><a href="https://scholar.google.com/citations?user=1dp8BZwAAAAJ">Google Scholar</a> · <a href="https://github.com/DjoFE2021">GitHub</a> · <a href="https://www.linkedin.com/in/jschwab5">LinkedIn</a></p>
-    </div>
+    <p>Johannes Schwab · EPFL &amp; Swiss Finance Institute</p>
+    <p><a href="mailto:johanneschwab@gmail.com">Email</a> · <a href="https://scholar.google.com/citations?user=1dp8BZwAAAAJ">Google Scholar</a> · <a href="https://github.com/DjoFE2021">GitHub</a> · <a href="https://www.linkedin.com/in/jschwab5">LinkedIn</a></p>
+    <p class="footer-note">Last updated October 2026</p>
   </div>
-  <div class="footer-bottom"><div>© 2026 Johannes Schwab · Last updated October 2026</div></div>
 </footer>
 </body>
 </html>
