@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Johannes Schwab · PhD candidate, EPFL</title>
+<meta name="description" content="Johannes Schwab is a PhD candidate in Machine Learning applied to Finance at EPFL, working on point-in-time language models, random matrix theory and kernel methods.">
+<meta name="author" content="Johannes Schwab">
+<link rel="canonical" href="https://johannes-schwab.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://johannes-schwab.github.io/">
+<meta property="og:title" content="Johannes Schwab">
+<meta property="og:description" content="PhD candidate in Machine Learning applied to Finance at EPFL.">
+<meta property="og:image" content="https://johannes-schwab.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Johannes Schwab",
+  "url": "https://johannes-schwab.github.io/",
+  "image": "https://johannes-schwab.github.io/photo.jpg",
+  "jobTitle": "PhD candidate in Machine Learning applied to Finance",
+  "affiliation": { "@type": "CollegeOrUniversity", "name": "EPFL" },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "EPFL" },
+    { "@type": "CollegeOrUniversity", "name": "University of Lausanne" }
+  ],
+  "sameAs": [
+    "https://www.linkedin.com/in/jschwab5",
+    "https://scholar.google.com/citations?user=1dp8BZwAAAAJ"
+  ]
+}
+</script>
+<style>
+  :root {
+    --bg: #ffffff;
+    --text: #1c2230;
+    --muted: #5d6676;
+    --accent: #1f3864;          /* same navy as the CV banner */
+    --on-accent: #ffffff;
+    --accent-soft: #e9eef7;
+    --rule: #e2e6ed;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #10151d;
+      --text: #e5e8ee;
+      --muted: #9aa3b1;
+      --accent: #9fbbeb;
+      --on-accent: #10151d;
+      --accent-soft: #1c2738;
+      --rule: #273244;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 17px/1.65 var(--sans);
+  }
+  a { color: var(--accent); text-underline-offset: 2px; }
+  main, footer { max-width: 760px; margin: 0 auto; padding-left: 20px; padding-right: 20px; }
+  main { padding-top: 64px; padding-bottom: 24px; }
+
+  /* Header */
+  .hero { display: flex; align-items: center; gap: 36px; }
+  .hero img { width: 176px; height: 176px; border-radius: 50%; object-fit: cover; flex: none; }
+  h1 { font: 600 2.6rem/1.1 var(--serif); color: var(--accent); margin: 0; letter-spacing: -0.01em; }
+  .tagline { margin: 10px 0 0; font-size: 1.08rem; }
+  .place { margin: 0 0 18px; color: var(--muted); }
+  .links { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+  .links a {
+    display: inline-block; padding: 5px 14px; border: 1px solid var(--rule); border-radius: 999px;
+    color: var(--text); text-decoration: none; font-size: 0.92rem; font-weight: 500;
+  }
+  .links a:hover { border-color: var(--accent); color: var(--accent); }
+  .links a.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+  .links a.primary:hover { opacity: 0.88; }
+
+  /* Sections */
+  section { margin-top: 56px; }
+  h2 {
+    font: 600 1.4rem/1.3 var(--serif); color: var(--accent);
+    margin: 0 0 18px; padding-bottom: 8px; border-bottom: 1px solid var(--rule);
+  }
+  p { margin: 0 0 14px; }
+
+  /* Papers */
+  .paper { margin-bottom: 28px; }
+  .paper h3 { font-size: 1.06rem; line-height: 1.4; margin: 0 0 4px; }
+  .paper h3 a { color: var(--text); text-decoration: none; }
+  .paper h3 a:hover { color: var(--accent); text-decoration: underline; }
+  .authors { color: var(--muted); font-size: 0.95rem; margin: 0 0 6px; }
+  .badge {
+    display: inline-block; margin-right: 6px; padding: 1px 9px; border-radius: 5px;
+    font-size: 0.78rem; font-weight: 600; background: var(--accent-soft); color: var(--accent);
+  }
+  .badge.highlight { background: var(--accent); color: var(--on-accent); }
+  .summary { margin: 0 0 6px; }
+  .meta { font-size: 0.92rem; color: var(--muted); margin: 0; }
+  .meta a { font-weight: 500; }
+
+  /* Talks */
+  figure { margin: 0 0 18px; }
+  figure img { display: block; width: 100%; height: auto; border-radius: 10px; }
+  figcaption { margin-top: 8px; font-size: 0.88rem; color: var(--muted); }
+  .talks { list-style: none; margin: 0; padding: 0; }
+  .talks li {
+    display: grid; grid-template-columns: 6.5rem 1fr; gap: 12px;
+    padding: 9px 0; border-bottom: 1px solid var(--rule);
+  }
+  .talks li:last-child { border-bottom: 0; }
+  .talks .when { color: var(--muted); font-size: 0.92rem; padding-top: 1px; }
+  .talks .when.upcoming { color: var(--accent); font-weight: 600; }
+  .talks em { color: var(--muted); }
+
+  /* Teaching, experience, education */
+  .entry { margin-bottom: 20px; }
+  .entry-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+  .entry-head strong { font-weight: 600; }
+  .entry-head .when { color: var(--muted); font-size: 0.92rem; white-space: nowrap; }
+  .entry p { margin: 2px 0 0; }
+  .sub { color: var(--muted); }
+
+  footer {
+    padding-top: 24px; padding-bottom: 48px; margin-top: 40px;
+    color: var(--muted); font-size: 0.85rem;
+  }
+  footer div { border-top: 1px solid var(--rule); padding-top: 20px; }
+
+  @media (max-width: 640px) {
+    main { padding-top: 40px; }
+    .hero { flex-direction: column; align-items: flex-start; gap: 20px; }
+    .hero img { width: 132px; height: 132px; }
+    h1 { font-size: 2.15rem; }
+    section { margin-top: 44px; }
+    .entry-head { flex-direction: column; gap: 0; }
+    .talks li { grid-template-columns: 1fr; gap: 0; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header class="hero">
+    <img src="photo.jpg" alt="Portrait of Johannes Schwab" width="176" height="176">
+    <div>
+      <h1>Johannes Schwab</h1>
+      <p class="tagline">PhD candidate in Machine Learning applied to Finance</p>
+      <p class="place">EPFL · Lausanne, Switzerland</p>
+      <ul class="links">
+        <li><a class="primary" href="Johannes-Schwab-CV.pdf">CV (PDF)</a></li>
+        <li><a href="https://scholar.google.com/citations?user=1dp8BZwAAAAJ">Google Scholar</a></li>
+        <li><a href="https://www.linkedin.com/in/jschwab5">LinkedIn</a></li>
+        <li><a href="mailto:johanneschwab@gmail.com">Email</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>I am a PhD candidate in Machine Learning applied to Finance at EPFL, advised by Prof.&nbsp;Semyon Malamud (Swiss Finance Institute). My research focuses on point-in-time large language models (models trained only on text available at each date, so they are free of lookahead bias), as well as random matrix theory and kernel methods. We train these models on 128&nbsp;GPUs in parallel at the Swiss National Supercomputing Centre (CSCS).</p>
+    <p>Before my PhD, I worked as a quantitative analyst at Taranis, a hedge fund in Geneva, and in asset management at Vaudoise Assurances. I hold an MSc in Financial Engineering from EPFL, where I received the Swiss Life Award for the highest GPA of my graduating class, and a BSc in Economics from the University of Lausanne.</p>
+    <p>Outside research, I play football in the 4th division of the Swiss Football League, play the piano and enjoy pastry-making.</p>
+  </section>
+
+  <section id="research">
+    <h2>Research</h2>
+
+    <article class="paper">
+      <h3><a href="https://arxiv.org/abs/2607.11889">Scaling Point-in-Time Language Models</a></h3>
+      <p class="authors"><span class="badge highlight">NeurIPS 2026</span>with Bryan Kelly, Semyon Malamud and Teng Andrea Xu</p>
+      <p class="summary">Shows that training decoder-only transformers of up to 4B parameters on 1T chronologically filtered tokens largely closes the performance gap between lookahead-free language models and their unconstrained counterparts.</p>
+      <p class="meta"><a href="https://arxiv.org/abs/2607.11889">arXiv</a> · <a href="https://www.nber.org/papers/w35247">NBER Working Paper 35247</a></p>
+    </article>
+
+    <article class="paper">
+      <h3><a href="https://arxiv.org/abs/2505.11347">Training NTK to Generalize with KARE</a></h3>
+      <p class="authors"><span class="badge">Working paper · 2025</span>with Bryan Kelly, Semyon Malamud and Teng Andrea Xu</p>
+      <p class="summary">Proposes optimizing the neural tangent kernel explicitly rather than implicitly through gradient descent, yielding kernels that match or outperform the deep networks they are derived from.</p>
+      <p class="meta"><a href="https://arxiv.org/abs/2505.11347">arXiv</a> · SFI Research Paper 25-51</p>
+    </article>
+
+    <article class="paper">
+      <h3><a href="https://www.nber.org/papers/w33565">A Test of the Efficiency of a Given Portfolio in High Dimensions</a></h3>
+      <p class="authors"><span class="badge">Working paper · 2025</span>with Mikhail Chernov, Bryan Kelly and Semyon Malamud</p>
+      <p class="summary">Extends the Gibbons–Ross–Shanken test to settings where test assets far outnumber the sample, using random matrix theory to correct the bias induced by regularized covariance estimation.</p>
+      <p class="meta"><a href="https://www.nber.org/papers/w33565">NBER Working Paper 33565</a> · SFI Research Paper 25-26</p>
+    </article>
+  </section>
+
+  <section id="talks">
+    <h2>Talks</h2>
+    <figure>
+      <img src="talk-sofie-2025.jpg" alt="Johannes Schwab presenting a research paper at the SoFiE 2025 conference in Paris" width="1600" height="1066" loading="lazy">
+      <figcaption>Presenting at SoFiE 2025 in Paris</figcaption>
+    </figure>
+    <ul class="talks">
+      <li><span class="when upcoming">Upcoming</span><div><strong>NeurIPS 2026</strong> (poster) · <em>Scaling Point-in-Time Language Models</em></div></li>
+      <li><span class="when upcoming">Upcoming</span><div><strong>EPFL Computational Future seminar</strong> (F.&nbsp;Kaplan) · <em>Scaling Point-in-Time Language Models</em></div></li>
+      <li><span class="when">2025</span><div><strong>European Summer Symposium in Financial Markets (ESSFM)</strong>, Gerzensee · <em>A Test of the Efficiency of a Given Portfolio in High Dimensions</em></div></li>
+      <li><span class="when">2025</span><div><strong>Society for Financial Econometrics (SoFiE)</strong>, Paris · <em>A Test of the Efficiency of a Given Portfolio in High Dimensions</em></div></li>
+    </ul>
+  </section>
+
+  <section id="teaching">
+    <h2>Teaching</h2>
+    <div class="entry">
+      <div class="entry-head"><strong>Teaching Assistant, EPFL Master in Financial Engineering</strong><span class="when">2023 – present</span></div>
+      <p>Stochastic Calculus · Machine Learning in Finance</p>
+      <p class="sub">Best Teaching Assistant Award 2026, by student vote</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><strong>Teaching Assistant, University of Lausanne</strong><span class="when">2019 – 2020</span></div>
+      <p>Algorithms and Computational Thinking <span class="sub">(School of Criminal Justice, 2020)</span></p>
+      <p>Business Intelligence and Analytics <span class="sub">(HEC Lausanne, 2019)</span></p>
+      <p>Statistics and Econometrics I <span class="sub">(HEC Lausanne, 2019)</span></p>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="entry">
+      <div class="entry-head"><strong>Quantitative Analyst · Taranis, Geneva</strong><span class="when">2022 – 2023</span></div>
+      <p>Backtesting infrastructure for option-based strategies, statistical analysis of trading signals and an automated trading system.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><strong>Asset Management Intern · Vaudoise Assurances, Lausanne</strong><span class="when">2021</span></div>
+      <p>Calibration of an option-based portfolio insurance strategy and Python tools for pricing, backtesting and reporting.</p>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="entry">
+      <div class="entry-head"><strong>PhD, Machine Learning applied to Finance · EPFL</strong><span class="when">2023 – present</span></div>
+      <p class="sub">Advisor: Prof.&nbsp;Semyon Malamud</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><strong>MSc, Financial Engineering · EPFL</strong><span class="when">2019 – 2021</span></div>
+      <p class="sub">GPA 5.8/6 · Swiss Life Award for the highest GPA</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><strong>BSc, Economics · University of Lausanne</strong><span class="when">2016 – 2019</span></div>
+      <p class="sub">GPA 5.6/6</p>
+    </div>
+  </section>
+</main>
+<footer><div>© 2026 Johannes Schwab · Last updated October 2026</div></footer>
+</body>
+</html>
