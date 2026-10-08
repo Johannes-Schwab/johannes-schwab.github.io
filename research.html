@@ -19,17 +19,19 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="site-header">
-  <a class="brand" href="index.html">Johannes Schwab</a>
-  <nav aria-label="Main">
-    <a href="index.html">Home</a>
-    <a href="research.html" aria-current="page">Research</a>
-    <a href="teaching.html">Teaching</a>
-    <a href="cv.html">CV</a>
-  </nav>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html"><span class="mono" aria-hidden="true">JS</span>Johannes Schwab</a>
+    <nav aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="research.html" aria-current="page">Research</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="cv.html">CV</a>
+    </nav>
+  </div>
 </header>
 
-<main>
+<main class="page">
   <h1 class="page-title">Research</h1>
   <p class="lead">I am interested in applying machine-learning techniques to asset pricing problems. Citations are on my <a href="https://scholar.google.com/citations?user=1dp8BZwAAAAJ">Google Scholar profile</a>, and the code for each paper is on <a href="https://github.com/DjoFE2021">GitHub</a>.</p>
 
@@ -85,6 +87,22 @@
   </section>
 </main>
 
-<footer><div>© 2026 Johannes Schwab · <a href="mailto:johanneschwab@gmail.com">Email</a> · <a href="https://scholar.google.com/citations?user=1dp8BZwAAAAJ">Google Scholar</a> · <a href="https://github.com/DjoFE2021">GitHub</a> · <a href="https://www.linkedin.com/in/jschwab5">LinkedIn</a> · Last updated October 2026</div></footer>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <a class="brand" href="index.html"><span class="mono" aria-hidden="true">JS</span>Johannes Schwab</a>
+      <p>PhD candidate · EPFL &amp; Swiss Finance Institute</p>
+    </div>
+    <div>
+      <p class="footer-label">Contact</p>
+      <p><a href="mailto:johanneschwab@gmail.com">johanneschwab@gmail.com</a></p>
+    </div>
+    <div>
+      <p class="footer-label">Profiles</p>
+      <p><a href="https://scholar.google.com/citations?user=1dp8BZwAAAAJ">Google Scholar</a> · <a href="https://github.com/DjoFE2021">GitHub</a> · <a href="https://www.linkedin.com/in/jschwab5">LinkedIn</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom"><div>© 2026 Johannes Schwab · Last updated October 2026</div></div>
+</footer>
 </body>
 </html>

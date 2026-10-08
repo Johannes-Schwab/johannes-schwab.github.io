@@ -39,33 +39,39 @@
 </script>
 </head>
 <body>
-<header class="site-header">
-  <a class="brand" href="index.html">Johannes Schwab</a>
-  <nav aria-label="Main">
-    <a href="index.html" aria-current="page">Home</a>
-    <a href="research.html">Research</a>
-    <a href="teaching.html">Teaching</a>
-    <a href="cv.html">CV</a>
-  </nav>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html"><span class="mono" aria-hidden="true">JS</span>Johannes Schwab</a>
+    <nav aria-label="Main">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="research.html">Research</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="cv.html">CV</a>
+    </nav>
+  </div>
 </header>
 
-<main>
-  <figure class="hero-photo">
-    <img src="hero-sofie-2025.jpg" alt="Johannes Schwab presenting his research at the SoFiE 2025 conference in Paris" width="1600" height="770">
-  </figure>
-  <h1 class="name">Johannes Schwab</h1>
-  <p class="tagline">PhD candidate in Machine Learning applied to Finance</p>
-  <p class="place">EPFL &amp; Swiss Finance Institute</p>
-  <p class="research">My research is in machine learning applied to finance, with a focus on asset pricing. I study how to test asset pricing models when the number of assets is large, how machine-learning models generalize, and how to build language models free of lookahead bias for financial applications. My work combines random matrix theory, kernel methods and large-scale model training.</p>
-  <ul class="links">
-    <li><a class="primary" href="Johannes-Schwab-CV.pdf">CV (PDF)</a></li>
-    <li><a href="https://scholar.google.com/citations?user=1dp8BZwAAAAJ">Google Scholar</a></li>
-    <li><a href="https://github.com/DjoFE2021">GitHub</a></li>
-    <li><a href="https://www.linkedin.com/in/jschwab5">LinkedIn</a></li>
-    <li><a href="mailto:johanneschwab@gmail.com">Email</a></li>
-  </ul>
+<main class="home">
+  <section class="hero" aria-label="Introduction">
+    <div>
+      <h1 class="name">Johannes Schwab</h1>
+      <p class="role">PhD candidate in Machine Learning applied to Finance</p>
+      <p class="place">EPFL &amp; Swiss Finance Institute</p>
+      <p class="research">My research is in machine learning applied to finance, with a focus on asset pricing. I study how to test asset pricing models when the number of assets is large, how machine-learning models generalize, and how to build language models free of lookahead bias for financial applications. My work combines random matrix theory, kernel methods and large-scale model training.</p>
+      <ul class="links">
+        <li><a class="primary" href="Johannes-Schwab-CV.pdf">CV (PDF)</a></li>
+        <li><a href="https://scholar.google.com/citations?user=1dp8BZwAAAAJ">Google Scholar</a></li>
+        <li><a href="https://github.com/DjoFE2021">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/jschwab5">LinkedIn</a></li>
+        <li><a href="mailto:johanneschwab@gmail.com">Email</a></li>
+      </ul>
+    </div>
+    <figure class="hero-photo">
+      <img src="hero-portrait.jpg" alt="Johannes Schwab presenting his research at the SoFiE 2025 conference in Paris" width="800" height="1000">
+    </figure>
+  </section>
 
-  <section id="highlights">
+  <section id="highlights" class="highlights">
     <h2>Highlights</h2>
     <ul class="dated">
       <li><span class="when">2026</span><div><em>Scaling Point-in-Time Language Models</em> accepted at <strong>NeurIPS 2026</strong> (poster)</div></li>
@@ -77,6 +83,22 @@
   </section>
 </main>
 
-<footer><div>© 2026 Johannes Schwab · <a href="mailto:johanneschwab@gmail.com">Email</a> · <a href="https://scholar.google.com/citations?user=1dp8BZwAAAAJ">Google Scholar</a> · <a href="https://github.com/DjoFE2021">GitHub</a> · <a href="https://www.linkedin.com/in/jschwab5">LinkedIn</a> · Last updated October 2026</div></footer>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <a class="brand" href="index.html"><span class="mono" aria-hidden="true">JS</span>Johannes Schwab</a>
+      <p>PhD candidate · EPFL &amp; Swiss Finance Institute</p>
+    </div>
+    <div>
+      <p class="footer-label">Contact</p>
+      <p><a href="mailto:johanneschwab@gmail.com">johanneschwab@gmail.com</a></p>
+    </div>
+    <div>
+      <p class="footer-label">Profiles</p>
+      <p><a href="https://scholar.google.com/citations?user=1dp8BZwAAAAJ">Google Scholar</a> · <a href="https://github.com/DjoFE2021">GitHub</a> · <a href="https://www.linkedin.com/in/jschwab5">LinkedIn</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom"><div>© 2026 Johannes Schwab · Last updated October 2026</div></div>
+</footer>
 </body>
 </html>
