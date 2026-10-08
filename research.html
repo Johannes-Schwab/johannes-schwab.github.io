@@ -31,7 +31,7 @@
 
 <main>
   <h1 class="page-title">Research</h1>
-  <p class="lead">My research interests are machine learning in finance, large language models, random matrix theory, kernel methods and financial econometrics. Citations are on my <a href="https://scholar.google.com/citations?user=1dp8BZwAAAAJ">Google Scholar profile</a>.</p>
+  <p class="lead">I am interested in applying machine-learning techniques to asset pricing problems. Citations are on my <a href="https://scholar.google.com/citations?user=1dp8BZwAAAAJ">Google Scholar profile</a>, and the code for each paper is on <a href="https://github.com/DjoFE2021">GitHub</a>.</p>
 
   <section id="publications">
     <h2>Publications</h2>
@@ -44,7 +44,7 @@
         <summary>Abstract</summary>
         <p>Large language models trained on unrestricted internet corpora inevitably embed information from the future, introducing lookahead bias that compromises the validity of backtests and causal inference in finance and the social sciences. Point-in-time language models—trained exclusively on text available up to each calendar date—eliminate this leakage by construction, but existing efforts typically produce models that lag substantially behind their unconstrained counterparts. We show that this performance gap can be substantially narrowed through scale. Training decoder-only transformers with up to 4 billion parameters on 1 trillion chronologically filtered tokens from FineWeb, we construct a sequence of monthly model checkpoints spanning 2013–2024. Across a range of common-sense reasoning and language understanding benchmarks, our models approach the performance of leading open-weight models of comparable size (e.g., Gemma-3-4B and LLaMA-7B) trained on temporally unrestricted data, although a performance gap remains on several tasks. Instruction fine-tuning via LoRA further improves downstream usability. We release the complete pipeline—including dataset construction, training infrastructure, and evaluation code—to enable reproducible point-in-time language modeling and to support research applications that require strict temporal validity.</p>
       </details>
-      <p class="meta"><a href="https://arxiv.org/abs/2607.11889">arXiv</a> · <a href="https://www.nber.org/papers/w35247">NBER Working Paper 35247</a></p>
+      <p class="meta"><a href="https://arxiv.org/abs/2607.11889">arXiv</a> · <a href="https://www.nber.org/papers/w35247">NBER Working Paper 35247</a> · <a href="https://github.com/DjoFE2021/Point-In-Time-LLM">Code</a></p>
     </article>
   </section>
 
@@ -59,7 +59,7 @@
         <summary>Abstract</summary>
         <p>The performance of the data-dependent neural tangent kernel (NTK; Jacot et al. (2018)) associated with a trained deep neural network (DNN) often matches or exceeds that of the full network. This implies that DNN training via gradient descent implicitly performs kernel learning by optimizing the NTK. In this paper, we propose instead to optimize the NTK explicitly. Rather than minimizing empirical risk, we train the NTK to minimize its generalization error using the recently developed Kernel Alignment Risk Estimator (KARE; Jacot et al. (2020)). Our simulations and real data experiments show that NTKs trained with KARE consistently match or significantly outperform the original DNN and the DNN-induced NTK (the after-kernel). These results suggest that explicitly trained kernels can outperform traditional end-to-end DNN optimization in certain settings, challenging the conventional dominance of DNNs. We argue that explicit training of NTK is a form of over-parametrized feature learning.</p>
       </details>
-      <p class="meta"><a href="https://arxiv.org/abs/2505.11347">arXiv</a> · SFI Research Paper 25-51</p>
+      <p class="meta"><a href="https://arxiv.org/abs/2505.11347">arXiv</a> · <a href="https://github.com/DjoFE2021/ntk-kare">Code</a> · SFI Research Paper 25-51</p>
     </article>
 
     <article class="paper">
@@ -70,7 +70,7 @@
         <summary>Abstract</summary>
         <p>We extend the Gibbons–Ross–Shanken test to high-dimensional cases, when the number of test assets far exceeds the sample size and the return covariance matrix is ill-conditioned or singular, as inevitably occurs with large, richly specified test portfolios. In such cases, one must use a regularized (and therefore biased) estimator of the covariance matrix, which distorts the original GRS test statistic. We use Random Matrix Theory to correct for this bias and characterize the asymptotic power of the resulting test. Power increases with the number of test assets and reaches its maximum across a broad range of local alternatives. These findings are supported by extensive simulations. We empirically implement the test on state-of-the-art candidate factor portfolios and test assets to evaluate conditional asset pricing performance.</p>
       </details>
-      <p class="meta"><a href="https://www.nber.org/papers/w33565">NBER Working Paper 33565</a> · SFI Research Paper 25-26</p>
+      <p class="meta"><a href="https://www.nber.org/papers/w33565">NBER Working Paper 33565</a> · <a href="https://github.com/DjoFE2021/CKMSEfficiencyTest">Code</a> · SFI Research Paper 25-26</p>
     </article>
   </section>
 
@@ -89,6 +89,6 @@
   </section>
 </main>
 
-<footer><div>© 2026 Johannes Schwab · <a href="mailto:johanneschwab@gmail.com">Email</a> · <a href="https://scholar.google.com/citations?user=1dp8BZwAAAAJ">Google Scholar</a> · <a href="https://www.linkedin.com/in/jschwab5">LinkedIn</a> · Last updated October 2026</div></footer>
+<footer><div>© 2026 Johannes Schwab · <a href="mailto:johanneschwab@gmail.com">Email</a> · <a href="https://scholar.google.com/citations?user=1dp8BZwAAAAJ">Google Scholar</a> · <a href="https://github.com/DjoFE2021">GitHub</a> · <a href="https://www.linkedin.com/in/jschwab5">LinkedIn</a> · Last updated October 2026</div></footer>
 </body>
 </html>
