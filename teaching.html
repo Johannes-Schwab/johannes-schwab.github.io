@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#0f1d36">
 <title>Teaching · Johannes Schwab</title>
 <meta name="description" content="Teaching by Johannes Schwab at EPFL and the University of Lausanne, including the 2026 Best Teaching Assistant Award.">
 <meta name="author" content="Johannes Schwab">
@@ -16,13 +18,15 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="topbar">
-  <div class="topbar-inner">
-    <a class="brand" href="index.html">Johannes Schwab</a>
-    <nav aria-label="Main">
+<header class="site-header">
+  <div class="container">
+    <a class="wordmark" href="index.html">Johannes Schwab</a>
+    <nav class="nav" aria-label="Main">
       <a href="index.html">Home</a>
       <a href="research.html">Research</a>
       <a href="teaching.html" aria-current="page">Teaching</a>
@@ -31,39 +35,72 @@
   </div>
 </header>
 
-<main class="page">
-  <h1 class="page-title">Teaching</h1>
-  <p class="lead">I have been a teaching assistant at EPFL and the University of Lausanne, in courses ranging from stochastic calculus and machine learning to statistics, analytics and programming.</p>
-
-  <div class="note">
-    <p><strong>Best Teaching Assistant Award 2026</strong>, by student vote in the EPFL Master in Financial Engineering, for Stochastic Calculus and Machine Learning in Finance.</p>
-  </div>
-
-  <section id="epfl">
-    <h2>EPFL</h2>
-    <div class="entry">
-      <div class="entry-head"><strong>Teaching Assistant, Master in Financial Engineering</strong><span class="when">2023 – present</span></div>
-      <p>Stochastic Calculus</p>
-      <p>Machine Learning in Finance</p>
+<main>
+  <header class="page-head">
+    <div class="container">
+      <p class="eyebrow rise">EPFL &amp; University of Lausanne</p>
+      <h1 class="rise d1">Teaching</h1>
+      <p class="intro rise d2">I have been a teaching assistant at EPFL and the University of Lausanne, in courses ranging from stochastic calculus and machine learning to statistics, analytics and programming.</p>
+      <div class="award rise d3">
+        <div class="year">2026</div>
+        <div>
+          <span class="tag">Awarded by student vote</span>
+          <h2>Best Teaching Assistant Award</h2>
+          <p>EPFL Master in Financial Engineering, for Stochastic Calculus and Machine Learning in Finance</p>
+        </div>
+      </div>
     </div>
-  </section>
+  </header>
 
-  <section id="unil">
-    <h2>University of Lausanne</h2>
-    <div class="entry">
-      <div class="entry-head"><strong>Teaching Assistant</strong><span class="when">2019 – 2020</span></div>
-      <p>Algorithms and Computational Thinking <span class="sub">(School of Criminal Justice, 2020)</span></p>
-      <p>Business Intelligence and Analytics <span class="sub">(HEC Lausanne, 2019)</span></p>
-      <p>Statistics and Econometrics I <span class="sub">(HEC Lausanne, 2019)</span></p>
+  <section class="block">
+    <div class="container">
+      <h2 class="block-title">Courses</h2>
+      <div class="courses">
+        <article class="course">
+          <span class="tag">EPFL</span>
+          <h3>Master in Financial Engineering</h3>
+          <p class="when">Teaching Assistant · 2023 – present</p>
+          <ul>
+            <li>Stochastic Calculus</li>
+            <li>Machine Learning in Finance</li>
+          </ul>
+        </article>
+        <article class="course">
+          <span class="tag">University of Lausanne</span>
+          <h3>HEC Lausanne &amp; School of Criminal Justice</h3>
+          <p class="when">Teaching Assistant · 2019 – 2020</p>
+          <ul>
+            <li>Algorithms and Computational Thinking<span>School of Criminal Justice · 2020</span></li>
+            <li>Business Intelligence and Analytics<span>HEC Lausanne · 2019</span></li>
+            <li>Statistics and Econometrics I<span>HEC Lausanne · 2019</span></li>
+          </ul>
+        </article>
+      </div>
     </div>
   </section>
 </main>
 
 <footer class="site-footer">
-  <div class="footer-inner">
-    <p>Johannes Schwab · EPFL &amp; Swiss Finance Institute</p>
-    <p><a href="mailto:johanneschwab@gmail.com">Email</a> · <a href="https://scholar.google.com/citations?user=1dp8BZwAAAAJ">Google Scholar</a> · <a href="https://github.com/DjoFE2021">GitHub</a> · <a href="https://www.linkedin.com/in/jschwab5">LinkedIn</a></p>
-    <p class="footer-note">Last updated October 2026</p>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-name">Johannes Schwab</p>
+        <p class="footer-about">PhD candidate in Machine Learning applied to Finance<br>EPFL &amp; Swiss Finance Institute</p>
+      </div>
+      <div>
+        <p class="footer-label">Contact</p>
+        <ul class="footer-list"><li><a href="mailto:johanneschwab@gmail.com">johanneschwab@gmail.com</a></li></ul>
+      </div>
+      <div>
+        <p class="footer-label">Elsewhere</p>
+        <ul class="footer-list">
+          <li><a href="https://scholar.google.com/citations?user=1dp8BZwAAAAJ">Google Scholar<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a></li>
+          <li><a href="https://github.com/DjoFE2021">GitHub<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a></li>
+          <li><a href="https://www.linkedin.com/in/jschwab5">LinkedIn<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Johannes Schwab</span><span>Last updated October 2026</span></div>
   </div>
 </footer>
 </body>

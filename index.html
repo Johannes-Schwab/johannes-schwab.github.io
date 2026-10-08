@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#0f1d36">
 <title>Johannes Schwab · PhD candidate, EPFL</title>
 <meta name="description" content="Johannes Schwab, PhD candidate at EPFL and the Swiss Finance Institute: machine learning applied to finance, with a focus on asset pricing.">
 <meta name="author" content="Johannes Schwab">
@@ -16,6 +18,8 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
 <script type="application/ld+json">
 {
@@ -39,10 +43,10 @@
 </script>
 </head>
 <body>
-<header class="topbar">
-  <div class="topbar-inner">
-    <a class="brand" href="index.html">Johannes Schwab</a>
-    <nav aria-label="Main">
+<header class="site-header">
+  <div class="container">
+    <a class="wordmark" href="index.html">Johannes Schwab</a>
+    <nav class="nav" aria-label="Main">
       <a href="index.html" aria-current="page">Home</a>
       <a href="research.html">Research</a>
       <a href="teaching.html">Teaching</a>
@@ -51,43 +55,104 @@
   </div>
 </header>
 
-<main class="home">
-  <section class="hero" aria-label="Introduction">
-    <div>
-      <h1 class="name">Johannes Schwab</h1>
-      <p class="role">PhD candidate in Machine Learning applied to Finance</p>
-      <p class="place">EPFL &amp; Swiss Finance Institute</p>
-      <p class="research">My research is in machine learning applied to finance, with a focus on asset pricing. I study how to test asset pricing models when the number of assets is large, how machine-learning models generalize, and how to build language models free of lookahead bias for financial applications. My work combines random matrix theory, kernel methods and large-scale model training.</p>
-      <ul class="textlinks">
-        <li><a href="Johannes-Schwab-CV.pdf">CV</a></li>
-        <li><a href="https://scholar.google.com/citations?user=1dp8BZwAAAAJ">Google Scholar</a></li>
-        <li><a href="https://github.com/DjoFE2021">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/jschwab5">LinkedIn</a></li>
-        <li><a href="mailto:johanneschwab@gmail.com">Email</a></li>
-      </ul>
+<main>
+  <section class="hero">
+    <div class="container">
+      <div>
+        <p class="eyebrow rise">EPFL &amp; Swiss Finance Institute</p>
+        <h1 class="rise d1">Johannes Schwab</h1>
+        <p class="role rise d2">PhD Candidate in Machine Learning applied to Finance</p>
+        <p class="statement rise d3">My research is in machine learning applied to finance, with a focus on asset pricing. I study how to test asset pricing models when the number of assets is large, how machine-learning models generalize, and how to build language models free of lookahead bias for financial applications. My work combines random matrix theory, kernel methods and large-scale model training.</p>
+        <div class="actions rise d4">
+          <a class="btn btn-primary" href="Johannes-Schwab-CV.pdf"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>Download CV</a>
+          <a class="btn btn-secondary" href="research.html">View research<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+          <a class="btn btn-secondary" href="mailto:johanneschwab@gmail.com"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7.5 8 5.5 8-5.5"/></svg>Contact</a>
+        </div>
+        <ul class="profiles rise d5">
+          <li><a href="https://scholar.google.com/citations?user=1dp8BZwAAAAJ">Google Scholar<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a></li>
+          <li><a href="https://github.com/DjoFE2021">GitHub<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a></li>
+          <li><a href="https://www.linkedin.com/in/jschwab5">LinkedIn<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a></li>
+        </ul>
+      </div>
+      <figure class="portrait rise d2">
+        <img src="hero-portrait.jpg" alt="Johannes Schwab presenting his research at the SoFiE 2025 conference in Paris" width="800" height="1000">
+        <figcaption><span>Presenting at SoFiE 2025</span><span>Paris · June 2025</span></figcaption>
+      </figure>
     </div>
-    <figure class="hero-photo">
-      <img src="hero-portrait.jpg" alt="Johannes Schwab presenting his research at the SoFiE 2025 conference in Paris" width="800" height="1000">
-    </figure>
   </section>
 
-  <section id="highlights" class="highlights">
-    <h2>Highlights</h2>
-    <ul class="dated">
-      <li><span class="when">2026</span><div><em>Scaling Point-in-Time Language Models</em> accepted at <strong>NeurIPS 2026</strong> (poster)</div></li>
-      <li><span class="when">2026</span><div><strong>Best Teaching Assistant Award</strong>, EPFL Master in Financial Engineering</div></li>
-      <li><span class="when">2025</span><div>Presented <em>A Test of the Efficiency of a Given Portfolio in High Dimensions</em> at <strong>SoFiE</strong> (Paris) and <strong>ESSFM</strong> (Gerzensee)</div></li>
-      <li><span class="when">2025</span><div>New working paper: <em>Training NTK to Generalize with KARE</em></div></li>
-    </ul>
-    <p class="more"><a href="research.html">All papers and talks →</a></p>
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Selected research</h2>
+        <a class="text-link" href="research.html">All papers and talks<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <span class="tag">NeurIPS 2026</span>
+          <h3><a href="https://arxiv.org/abs/2607.11889">Scaling Point-in-Time Language Models</a></h3>
+          <p>Decoder-only transformers of up to 4B parameters, trained on 1T chronologically filtered tokens, largely close the gap between lookahead-free language models and their unconstrained counterparts.</p>
+          <div class="card-links">
+            <a href="https://arxiv.org/abs/2607.11889">Paper<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a>
+            <a href="https://github.com/DjoFE2021/Point-In-Time-LLM">Code<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a>
+          </div>
+        </article>
+        <article class="card">
+          <span class="tag">Working paper · 2025</span>
+          <h3><a href="https://arxiv.org/abs/2505.11347">Training NTK to Generalize with KARE</a></h3>
+          <p>Optimizing the neural tangent kernel explicitly, rather than implicitly through gradient descent, yields kernels that match or outperform the deep networks they are derived from.</p>
+          <div class="card-links">
+            <a href="https://arxiv.org/abs/2505.11347">Paper<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a>
+            <a href="https://github.com/DjoFE2021/ntk-kare">Code<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a>
+          </div>
+        </article>
+        <article class="card">
+          <span class="tag">NBER working paper · 2025</span>
+          <h3><a href="https://www.nber.org/papers/w33565">A Test of the Efficiency of a Given Portfolio in High Dimensions</a></h3>
+          <p>Extends the Gibbons–Ross–Shanken test to settings where test assets far outnumber observations, using random matrix theory to correct the bias of regularized covariance estimates.</p>
+          <div class="card-links">
+            <a href="https://www.nber.org/papers/w33565">Paper<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a>
+            <a href="https://github.com/DjoFE2021/CKMSEfficiencyTest">Code<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <h2>News</h2>
+      <ul class="timeline">
+        <li><span class="when">2026</span><p><cite>Scaling Point-in-Time Language Models</cite> accepted at <strong>NeurIPS 2026</strong></p></li>
+        <li><span class="when">2026</span><p><strong>Best Teaching Assistant Award</strong>, EPFL Master in Financial Engineering</p></li>
+        <li><span class="when">2025</span><p>Presented <cite>A Test of the Efficiency of a Given Portfolio in High Dimensions</cite> at <strong>SoFiE</strong> (Paris) and <strong>ESSFM</strong> (Gerzensee)</p></li>
+        <li><span class="when">2025</span><p>New working paper: <cite>Training NTK to Generalize with KARE</cite></p></li>
+      </ul>
+    </div>
   </section>
 </main>
 
 <footer class="site-footer">
-  <div class="footer-inner">
-    <p>Johannes Schwab · EPFL &amp; Swiss Finance Institute</p>
-    <p><a href="mailto:johanneschwab@gmail.com">Email</a> · <a href="https://scholar.google.com/citations?user=1dp8BZwAAAAJ">Google Scholar</a> · <a href="https://github.com/DjoFE2021">GitHub</a> · <a href="https://www.linkedin.com/in/jschwab5">LinkedIn</a></p>
-    <p class="footer-note">Last updated October 2026</p>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-name">Johannes Schwab</p>
+        <p class="footer-about">PhD candidate in Machine Learning applied to Finance<br>EPFL &amp; Swiss Finance Institute</p>
+      </div>
+      <div>
+        <p class="footer-label">Contact</p>
+        <ul class="footer-list"><li><a href="mailto:johanneschwab@gmail.com">johanneschwab@gmail.com</a></li></ul>
+      </div>
+      <div>
+        <p class="footer-label">Elsewhere</p>
+        <ul class="footer-list">
+          <li><a href="https://scholar.google.com/citations?user=1dp8BZwAAAAJ">Google Scholar<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a></li>
+          <li><a href="https://github.com/DjoFE2021">GitHub<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a></li>
+          <li><a href="https://www.linkedin.com/in/jschwab5">LinkedIn<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Johannes Schwab</span><span>Last updated October 2026</span></div>
   </div>
 </footer>
 </body>

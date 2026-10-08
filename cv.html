@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#0f1d36">
 <title>CV · Johannes Schwab</title>
 <meta name="description" content="CV of Johannes Schwab: PhD candidate at EPFL, MSc in Financial Engineering (EPFL), former quantitative analyst.">
 <meta name="author" content="Johannes Schwab">
@@ -16,13 +18,15 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="topbar">
-  <div class="topbar-inner">
-    <a class="brand" href="index.html">Johannes Schwab</a>
-    <nav aria-label="Main">
+<header class="site-header">
+  <div class="container">
+    <a class="wordmark" href="index.html">Johannes Schwab</a>
+    <nav class="nav" aria-label="Main">
       <a href="index.html">Home</a>
       <a href="research.html">Research</a>
       <a href="teaching.html">Teaching</a>
@@ -31,79 +35,132 @@
   </div>
 </header>
 
-<main class="page">
-  <h1 class="page-title">CV</h1>
-  <p class="lead">A summary of my background. The full academic CV, with publications and talks, is available as a <a href="Johannes-Schwab-CV.pdf">PDF</a>.</p>
+<main>
+  <header class="page-head">
+    <div class="container">
+      <p class="eyebrow rise">Background</p>
+      <h1 class="rise d1">Curriculum Vitae</h1>
+      <p class="intro rise d2">A summary of my background. The full academic CV, with publications and talks, is available as a PDF.</p>
+      <div class="actions rise d3">
+        <a class="btn btn-primary" href="Johannes-Schwab-CV.pdf"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>Download CV (PDF)</a>
+      </div>
+    </div>
+  </header>
 
-  <section id="education">
-    <h2>Education</h2>
-    <div class="entry">
-      <div class="entry-head"><strong>PhD, Machine Learning applied to Finance · EPFL</strong><span class="when">2023 – present</span></div>
-      <p class="sub">Advisor: Prof.&nbsp;Semyon Malamud (Swiss Finance Institute)</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><strong>MSc, Financial Engineering · EPFL</strong><span class="when">2019 – 2021</span></div>
-      <p class="sub">GPA 5.8/6 · Swiss Life Award for the highest GPA of the graduating class</p>
-      <p class="sub">Master's thesis: Use of machine learning techniques for portfolio insurance (at Vaudoise Assurances)</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><strong>BSc, Economics · University of Lausanne (HEC)</strong><span class="when">2016 – 2019</span></div>
-      <p class="sub">GPA 5.6/6</p>
+  <section class="block compact">
+    <div class="container">
+      <h2 class="block-title">Education</h2>
+      <div class="entries">
+        <div class="entry">
+          <h3>PhD, Machine Learning applied to Finance</h3>
+          <span class="when">2023 – present</span>
+          <p class="org">EPFL, Lausanne</p>
+          <p class="detail">Advisor: Prof.&nbsp;Semyon Malamud (Swiss Finance Institute)</p>
+        </div>
+        <div class="entry">
+          <h3>MSc, Financial Engineering</h3>
+          <span class="when">2019 – 2021</span>
+          <p class="org">EPFL, Lausanne</p>
+          <p class="detail">GPA 5.8/6 · Swiss Life Award for the highest GPA of the graduating class · Master's thesis on machine learning for portfolio insurance, at Vaudoise Assurances</p>
+        </div>
+        <div class="entry">
+          <h3>BSc, Economics</h3>
+          <span class="when">2016 – 2019</span>
+          <p class="org">University of Lausanne (HEC)</p>
+          <p class="detail">GPA 5.6/6</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="experience">
-    <h2>Experience</h2>
-    <div class="entry">
-      <div class="entry-head"><strong>Quantitative Analyst · Taranis, Geneva</strong><span class="when">2022 – 2023</span></div>
-      <p>Backtesting infrastructure for option-based strategies, statistical analysis of trading signals and an automated trading system.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><strong>Asset Management Intern · Vaudoise Assurances, Lausanne</strong><span class="when">2021</span></div>
-      <p>Calibration of an option-based portfolio insurance strategy and Python tools for pricing, backtesting and reporting.</p>
-    </div>
-  </section>
-
-  <section id="awards">
-    <h2>Honors and awards</h2>
-    <div class="entry">
-      <div class="entry-head"><strong>Best Teaching Assistant Award</strong><span class="when">2026</span></div>
-      <p class="sub">By student vote, EPFL Master in Financial Engineering</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><strong>Swiss Life Award</strong><span class="when">2021</span></div>
-      <p class="sub">Highest GPA in the EPFL Master of Science in Financial Engineering</p>
+  <section class="block compact">
+    <div class="container">
+      <h2 class="block-title">Experience</h2>
+      <div class="entries">
+        <div class="entry">
+          <h3>Quantitative Analyst</h3>
+          <span class="when">2022 – 2023</span>
+          <p class="org">Taranis, hedge fund, Geneva</p>
+          <p class="detail">Backtesting infrastructure for option-based strategies, statistical analysis of trading signals and an automated trading system.</p>
+        </div>
+        <div class="entry">
+          <h3>Asset Management Intern</h3>
+          <span class="when">2021</span>
+          <p class="org">Vaudoise Assurances, Lausanne</p>
+          <p class="detail">Calibration of an option-based portfolio insurance strategy and Python tools for pricing, backtesting and reporting.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <dl class="pairs">
-      <dt>Programming</dt><dd>Python (PyTorch, NumPy, pandas, scikit-learn), MATLAB, SQL, LaTeX</dd>
-      <dt>High-performance computing</dt><dd>Multi-node GPU training (128 GPUs at CSCS), MPI, NCCL, SLURM</dd>
-    </dl>
+  <section class="block compact">
+    <div class="container">
+      <h2 class="block-title">Honors and awards</h2>
+      <div class="entries">
+        <div class="entry">
+          <h3>Best Teaching Assistant Award</h3>
+          <span class="when">2026</span>
+          <p class="org">By student vote, EPFL Master in Financial Engineering</p>
+        </div>
+        <div class="entry">
+          <h3>Swiss Life Award</h3>
+          <span class="when">2021</span>
+          <p class="org">Highest GPA in the EPFL Master of Science in Financial Engineering</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section id="languages">
-    <h2>Languages</h2>
-    <dl class="pairs">
-      <dt>French</dt><dd>Native</dd>
-      <dt>English</dt><dd>Fluent (C1)</dd>
-      <dt>German</dt><dd>Upper intermediate (B2)</dd>
-    </dl>
+  <section class="block compact">
+    <div class="container">
+      <h2 class="block-title">Skills</h2>
+      <dl class="kv">
+        <dt>Programming</dt><dd>Python (PyTorch, NumPy, pandas, scikit-learn), MATLAB, SQL, LaTeX</dd>
+        <dt>High-performance computing</dt><dd>Multi-node GPU training (128 GPUs at CSCS), MPI, NCCL, SLURM</dd>
+      </dl>
+    </div>
   </section>
 
-  <section id="interests">
-    <h2>Interests</h2>
-    <p>Football (4th division, Swiss Football League), piano, pastry-making</p>
+  <section class="block compact">
+    <div class="container">
+      <h2 class="block-title">Languages</h2>
+      <dl class="kv">
+        <dt>French</dt><dd>Native</dd>
+        <dt>English</dt><dd>Fluent (C1)</dd>
+        <dt>German</dt><dd>Upper intermediate (B2)</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="block compact">
+    <div class="container">
+      <h2 class="block-title">Interests</h2>
+      <p class="plain">Football (4th division, Swiss Football League), piano, pastry-making</p>
+    </div>
   </section>
 </main>
 
 <footer class="site-footer">
-  <div class="footer-inner">
-    <p>Johannes Schwab · EPFL &amp; Swiss Finance Institute</p>
-    <p><a href="mailto:johanneschwab@gmail.com">Email</a> · <a href="https://scholar.google.com/citations?user=1dp8BZwAAAAJ">Google Scholar</a> · <a href="https://github.com/DjoFE2021">GitHub</a> · <a href="https://www.linkedin.com/in/jschwab5">LinkedIn</a></p>
-    <p class="footer-note">Last updated October 2026</p>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-name">Johannes Schwab</p>
+        <p class="footer-about">PhD candidate in Machine Learning applied to Finance<br>EPFL &amp; Swiss Finance Institute</p>
+      </div>
+      <div>
+        <p class="footer-label">Contact</p>
+        <ul class="footer-list"><li><a href="mailto:johanneschwab@gmail.com">johanneschwab@gmail.com</a></li></ul>
+      </div>
+      <div>
+        <p class="footer-label">Elsewhere</p>
+        <ul class="footer-list">
+          <li><a href="https://scholar.google.com/citations?user=1dp8BZwAAAAJ">Google Scholar<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a></li>
+          <li><a href="https://github.com/DjoFE2021">GitHub<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a></li>
+          <li><a href="https://www.linkedin.com/in/jschwab5">LinkedIn<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Johannes Schwab</span><span>Last updated October 2026</span></div>
   </div>
 </footer>
 </body>

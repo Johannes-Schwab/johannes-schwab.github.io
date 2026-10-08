@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#0f1d36">
 <title>Research · Johannes Schwab</title>
 <meta name="description" content="Papers and talks by Johannes Schwab on point-in-time language models, neural tangent kernels and high-dimensional asset pricing tests.">
 <meta name="author" content="Johannes Schwab">
@@ -16,13 +18,15 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="topbar">
-  <div class="topbar-inner">
-    <a class="brand" href="index.html">Johannes Schwab</a>
-    <nav aria-label="Main">
+<header class="site-header">
+  <div class="container">
+    <a class="wordmark" href="index.html">Johannes Schwab</a>
+    <nav class="nav" aria-label="Main">
       <a href="index.html">Home</a>
       <a href="research.html" aria-current="page">Research</a>
       <a href="teaching.html">Teaching</a>
@@ -31,70 +35,116 @@
   </div>
 </header>
 
-<main class="page">
-  <h1 class="page-title">Research</h1>
-  <p class="lead">I am interested in applying machine-learning techniques to asset pricing problems. Citations are on my <a href="https://scholar.google.com/citations?user=1dp8BZwAAAAJ">Google Scholar profile</a>, and the code for each paper is on <a href="https://github.com/DjoFE2021">GitHub</a>.</p>
+<main>
+  <header class="page-head">
+    <div class="container">
+      <p class="eyebrow rise">Papers &amp; talks</p>
+      <h1 class="rise d1">Research</h1>
+      <p class="intro rise d2">I am interested in applying machine-learning techniques to asset pricing problems. The code behind every paper is open source.</p>
+      <div class="actions rise d3">
+        <a class="btn btn-secondary" href="https://scholar.google.com/citations?user=1dp8BZwAAAAJ">Google Scholar<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a>
+        <a class="btn btn-secondary" href="https://github.com/DjoFE2021">GitHub<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a>
+      </div>
+    </div>
+  </header>
 
-  <section id="publications">
-    <h2>Publications</h2>
-
-    <article class="paper">
-      <h3><a href="https://arxiv.org/abs/2607.11889">Scaling Point-in-Time Language Models</a></h3>
-      <p class="authors">Bryan Kelly, Semyon Malamud, <strong>Johannes Schwab</strong> and Teng Andrea Xu</p>
-      <p class="venue"><em>Advances in Neural Information Processing Systems</em> (NeurIPS), 2026</p>
-      <p class="summary">Shows that training decoder-only transformers of up to 4B parameters on 1T chronologically filtered tokens largely closes the performance gap between lookahead-free language models and their unconstrained counterparts.</p>
-      <details>
-        <summary>Abstract</summary>
-        <p>Large language models trained on unrestricted internet corpora inevitably embed information from the future, introducing lookahead bias that compromises the validity of backtests and causal inference in finance and the social sciences. Point-in-time language models—trained exclusively on text available up to each calendar date—eliminate this leakage by construction, but existing efforts typically produce models that lag substantially behind their unconstrained counterparts. We show that this performance gap can be substantially narrowed through scale. Training decoder-only transformers with up to 4 billion parameters on 1 trillion chronologically filtered tokens from FineWeb, we construct a sequence of monthly model checkpoints spanning 2013–2024. Across a range of common-sense reasoning and language understanding benchmarks, our models approach the performance of leading open-weight models of comparable size (e.g., Gemma-3-4B and LLaMA-7B) trained on temporally unrestricted data, although a performance gap remains on several tasks. Instruction fine-tuning via LoRA further improves downstream usability. We release the complete pipeline—including dataset construction, training infrastructure, and evaluation code—to enable reproducible point-in-time language modeling and to support research applications that require strict temporal validity.</p>
-      </details>
-      <p class="meta"><a href="https://arxiv.org/abs/2607.11889">arXiv</a> · <a href="https://www.nber.org/papers/w35247">NBER Working Paper 35247</a> · <a href="https://github.com/DjoFE2021/Point-In-Time-LLM">Code</a></p>
-    </article>
+  <section class="block">
+    <div class="container">
+      <h2 class="block-title">Publications</h2>
+      <div>
+        <article class="pub">
+          <span class="tag">NeurIPS 2026</span>
+          <h3><a href="https://arxiv.org/abs/2607.11889">Scaling Point-in-Time Language Models</a></h3>
+          <p class="authors">Bryan Kelly, Semyon Malamud, <strong>Johannes Schwab</strong> and Teng Andrea Xu</p>
+          <p class="series"><em>Advances in Neural Information Processing Systems</em>, 2026 · NBER Working Paper 35247</p>
+          <p class="summary">Shows that training decoder-only transformers of up to 4B parameters on 1T chronologically filtered tokens largely closes the performance gap between lookahead-free language models and their unconstrained counterparts.</p>
+          <details class="abstract">
+            <summary>Abstract</summary>
+            <p>Large language models trained on unrestricted internet corpora inevitably embed information from the future, introducing lookahead bias that compromises the validity of backtests and causal inference in finance and the social sciences. Point-in-time language models—trained exclusively on text available up to each calendar date—eliminate this leakage by construction, but existing efforts typically produce models that lag substantially behind their unconstrained counterparts. We show that this performance gap can be substantially narrowed through scale. Training decoder-only transformers with up to 4 billion parameters on 1 trillion chronologically filtered tokens from FineWeb, we construct a sequence of monthly model checkpoints spanning 2013–2024. Across a range of common-sense reasoning and language understanding benchmarks, our models approach the performance of leading open-weight models of comparable size (e.g., Gemma-3-4B and LLaMA-7B) trained on temporally unrestricted data, although a performance gap remains on several tasks. Instruction fine-tuning via LoRA further improves downstream usability. We release the complete pipeline—including dataset construction, training infrastructure, and evaluation code—to enable reproducible point-in-time language modeling and to support research applications that require strict temporal validity.</p>
+          </details>
+          <ul class="chips">
+            <li><a class="chip" href="https://arxiv.org/abs/2607.11889">arXiv<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a></li>
+            <li><a class="chip" href="https://www.nber.org/papers/w35247">NBER<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a></li>
+            <li><a class="chip" href="https://github.com/DjoFE2021/Point-In-Time-LLM">Code<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a></li>
+          </ul>
+        </article>
+      </div>
+    </div>
   </section>
 
-  <section id="working-papers">
-    <h2>Working papers</h2>
+  <section class="block">
+    <div class="container">
+      <h2 class="block-title">Working papers</h2>
+      <div>
+        <article class="pub">
+          <span class="tag">Working paper · 2025</span>
+          <h3><a href="https://arxiv.org/abs/2505.11347">Training NTK to Generalize with KARE</a></h3>
+          <p class="authors"><strong>Johannes Schwab</strong>, Bryan Kelly, Semyon Malamud and Teng Andrea Xu</p>
+          <p class="series">SFI Research Paper 25-51</p>
+          <p class="summary">Proposes optimizing the neural tangent kernel explicitly rather than implicitly through gradient descent, yielding kernels that match or outperform the deep networks they are derived from.</p>
+          <details class="abstract">
+            <summary>Abstract</summary>
+            <p>The performance of the data-dependent neural tangent kernel (NTK; Jacot et al. (2018)) associated with a trained deep neural network (DNN) often matches or exceeds that of the full network. This implies that DNN training via gradient descent implicitly performs kernel learning by optimizing the NTK. In this paper, we propose instead to optimize the NTK explicitly. Rather than minimizing empirical risk, we train the NTK to minimize its generalization error using the recently developed Kernel Alignment Risk Estimator (KARE; Jacot et al. (2020)). Our simulations and real data experiments show that NTKs trained with KARE consistently match or significantly outperform the original DNN and the DNN-induced NTK (the after-kernel). These results suggest that explicitly trained kernels can outperform traditional end-to-end DNN optimization in certain settings, challenging the conventional dominance of DNNs. We argue that explicit training of NTK is a form of over-parametrized feature learning.</p>
+          </details>
+          <ul class="chips">
+            <li><a class="chip" href="https://arxiv.org/abs/2505.11347">arXiv<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a></li>
+            <li><a class="chip" href="https://github.com/DjoFE2021/ntk-kare">Code<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a></li>
+          </ul>
+        </article>
 
-    <article class="paper">
-      <h3><a href="https://arxiv.org/abs/2505.11347">Training NTK to Generalize with KARE</a></h3>
-      <p class="authors"><strong>Johannes Schwab</strong>, Bryan Kelly, Semyon Malamud and Teng Andrea Xu</p>
-      <p class="venue">Working paper, 2025 · SFI Research Paper 25-51</p>
-      <p class="summary">Proposes optimizing the neural tangent kernel explicitly rather than implicitly through gradient descent, yielding kernels that match or outperform the deep networks they are derived from.</p>
-      <details>
-        <summary>Abstract</summary>
-        <p>The performance of the data-dependent neural tangent kernel (NTK; Jacot et al. (2018)) associated with a trained deep neural network (DNN) often matches or exceeds that of the full network. This implies that DNN training via gradient descent implicitly performs kernel learning by optimizing the NTK. In this paper, we propose instead to optimize the NTK explicitly. Rather than minimizing empirical risk, we train the NTK to minimize its generalization error using the recently developed Kernel Alignment Risk Estimator (KARE; Jacot et al. (2020)). Our simulations and real data experiments show that NTKs trained with KARE consistently match or significantly outperform the original DNN and the DNN-induced NTK (the after-kernel). These results suggest that explicitly trained kernels can outperform traditional end-to-end DNN optimization in certain settings, challenging the conventional dominance of DNNs. We argue that explicit training of NTK is a form of over-parametrized feature learning.</p>
-      </details>
-      <p class="meta"><a href="https://arxiv.org/abs/2505.11347">arXiv</a> · <a href="https://github.com/DjoFE2021/ntk-kare">Code</a></p>
-    </article>
-
-    <article class="paper">
-      <h3><a href="https://www.nber.org/papers/w33565">A Test of the Efficiency of a Given Portfolio in High Dimensions</a></h3>
-      <p class="authors">Mikhail Chernov, Bryan Kelly, Semyon Malamud and <strong>Johannes Schwab</strong></p>
-      <p class="venue">Working paper, 2025 · SFI Research Paper 25-26</p>
-      <p class="summary">Extends the Gibbons–Ross–Shanken test to settings where test assets far outnumber the sample, using random matrix theory to correct the bias induced by regularized covariance estimation.</p>
-      <details>
-        <summary>Abstract</summary>
-        <p>We extend the Gibbons–Ross–Shanken test to high-dimensional cases, when the number of test assets far exceeds the sample size and the return covariance matrix is ill-conditioned or singular, as inevitably occurs with large, richly specified test portfolios. In such cases, one must use a regularized (and therefore biased) estimator of the covariance matrix, which distorts the original GRS test statistic. We use Random Matrix Theory to correct for this bias and characterize the asymptotic power of the resulting test. Power increases with the number of test assets and reaches its maximum across a broad range of local alternatives. These findings are supported by extensive simulations. We empirically implement the test on state-of-the-art candidate factor portfolios and test assets to evaluate conditional asset pricing performance.</p>
-      </details>
-      <p class="meta"><a href="https://www.nber.org/papers/w33565">NBER Working Paper 33565</a> · <a href="https://github.com/DjoFE2021/CKMSEfficiencyTest">Code</a></p>
-    </article>
+        <article class="pub">
+          <span class="tag">Working paper · 2025</span>
+          <h3><a href="https://www.nber.org/papers/w33565">A Test of the Efficiency of a Given Portfolio in High Dimensions</a></h3>
+          <p class="authors">Mikhail Chernov, Bryan Kelly, Semyon Malamud and <strong>Johannes Schwab</strong></p>
+          <p class="series">NBER Working Paper 33565 · SFI Research Paper 25-26</p>
+          <p class="summary">Extends the Gibbons–Ross–Shanken test to settings where test assets far outnumber the sample, using random matrix theory to correct the bias induced by regularized covariance estimation.</p>
+          <details class="abstract">
+            <summary>Abstract</summary>
+            <p>We extend the Gibbons–Ross–Shanken test to high-dimensional cases, when the number of test assets far exceeds the sample size and the return covariance matrix is ill-conditioned or singular, as inevitably occurs with large, richly specified test portfolios. In such cases, one must use a regularized (and therefore biased) estimator of the covariance matrix, which distorts the original GRS test statistic. We use Random Matrix Theory to correct for this bias and characterize the asymptotic power of the resulting test. Power increases with the number of test assets and reaches its maximum across a broad range of local alternatives. These findings are supported by extensive simulations. We empirically implement the test on state-of-the-art candidate factor portfolios and test assets to evaluate conditional asset pricing performance.</p>
+          </details>
+          <ul class="chips">
+            <li><a class="chip" href="https://www.nber.org/papers/w33565">NBER<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a></li>
+            <li><a class="chip" href="https://github.com/DjoFE2021/CKMSEfficiencyTest">Code<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a></li>
+          </ul>
+        </article>
+      </div>
+    </div>
   </section>
 
-  <section id="talks">
-    <h2>Talks</h2>
-    <ul class="dated">
-      <li><span class="when upcoming">Upcoming</span><div><strong>NeurIPS 2026</strong> (poster) · <em>Scaling Point-in-Time Language Models</em></div></li>
-      <li><span class="when upcoming">Upcoming</span><div><strong>EPFL Computational Future seminar</strong> (F.&nbsp;Kaplan) · <em>Scaling Point-in-Time Language Models</em></div></li>
-      <li><span class="when">2025</span><div><strong>European Summer Symposium in Financial Markets (ESSFM)</strong>, Gerzensee · <em>A Test of the Efficiency of a Given Portfolio in High Dimensions</em></div></li>
-      <li><span class="when">2025</span><div><strong>Society for Financial Econometrics (SoFiE)</strong>, Paris · <em>A Test of the Efficiency of a Given Portfolio in High Dimensions</em></div></li>
-    </ul>
+  <section class="block">
+    <div class="container">
+      <h2 class="block-title">Talks</h2>
+      <ul class="timeline">
+        <li><span class="when next">Upcoming</span><p><strong>NeurIPS 2026</strong>, poster · <cite>Scaling Point-in-Time Language Models</cite></p></li>
+        <li><span class="when next">Upcoming</span><p><strong>EPFL Computational Future seminar</strong> (F.&nbsp;Kaplan) · <cite>Scaling Point-in-Time Language Models</cite></p></li>
+        <li><span class="when">2025</span><p><strong>European Summer Symposium in Financial Markets (ESSFM)</strong>, Gerzensee · <cite>A Test of the Efficiency of a Given Portfolio in High Dimensions</cite></p></li>
+        <li><span class="when">2025</span><p><strong>Society for Financial Econometrics (SoFiE)</strong>, Paris · <cite>A Test of the Efficiency of a Given Portfolio in High Dimensions</cite></p></li>
+      </ul>
+    </div>
   </section>
 </main>
 
 <footer class="site-footer">
-  <div class="footer-inner">
-    <p>Johannes Schwab · EPFL &amp; Swiss Finance Institute</p>
-    <p><a href="mailto:johanneschwab@gmail.com">Email</a> · <a href="https://scholar.google.com/citations?user=1dp8BZwAAAAJ">Google Scholar</a> · <a href="https://github.com/DjoFE2021">GitHub</a> · <a href="https://www.linkedin.com/in/jschwab5">LinkedIn</a></p>
-    <p class="footer-note">Last updated October 2026</p>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-name">Johannes Schwab</p>
+        <p class="footer-about">PhD candidate in Machine Learning applied to Finance<br>EPFL &amp; Swiss Finance Institute</p>
+      </div>
+      <div>
+        <p class="footer-label">Contact</p>
+        <ul class="footer-list"><li><a href="mailto:johanneschwab@gmail.com">johanneschwab@gmail.com</a></li></ul>
+      </div>
+      <div>
+        <p class="footer-label">Elsewhere</p>
+        <ul class="footer-list">
+          <li><a href="https://scholar.google.com/citations?user=1dp8BZwAAAAJ">Google Scholar<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a></li>
+          <li><a href="https://github.com/DjoFE2021">GitHub<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a></li>
+          <li><a href="https://www.linkedin.com/in/jschwab5">LinkedIn<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Johannes Schwab</span><span>Last updated October 2026</span></div>
   </div>
 </footer>
 </body>
