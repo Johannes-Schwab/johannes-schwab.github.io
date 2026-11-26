@@ -127,6 +127,23 @@ cite { font: italic 400 1.07em/1.4 var(--font-display); color: var(--ink); }
 .card-links a:hover { text-decoration: underline; text-underline-offset: 4px; }
 .card-links .icon { width: 0.85em; height: 0.85em; }
 
+/* Featured card: the peer-reviewed paper spans the grid, its video on the right */
+.card.featured { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 420px); gap: 56px; align-items: center; padding: 34px 34px 34px 36px; }
+.card.featured .card-body { display: flex; flex-direction: column; align-self: stretch; }
+.card.featured h3 { font-size: 1.7rem; }
+.card.featured p { max-width: 34rem; font-size: 1rem; }
+.card-media { display: block; text-decoration: none; }
+.card-media-frame {
+  display: block; aspect-ratio: 16 / 9; overflow: hidden;
+  border: 1px solid var(--line); border-radius: 10px; background: var(--paper);
+}
+.card-media-frame img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .5s var(--ease); }
+.card-media:hover .card-media-frame img { transform: scale(1.03); }
+.card-media .watch-label { margin-top: 16px; }
+.card-media:hover .play { background: var(--navy-deep); transform: scale(1.08); }
+.card-media-meta { margin-left: 4px; font-weight: 400; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.card-media-meta::before { content: "·"; margin-right: 8px; }
+
 .split { display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 64px; }
 .timeline { list-style: none; margin: 0; padding: 0; }
 .timeline li { display: grid; grid-template-columns: 104px minmax(0, 1fr); gap: 24px; padding: 22px 0; border-top: 1px solid var(--line); }
@@ -296,8 +313,8 @@ cite { font: italic 400 1.07em/1.4 var(--font-display); color: var(--ink); }
 .d4 { animation-delay: .24s; } .d5 { animation-delay: .3s; }
 @media (prefers-reduced-motion: reduce) {
   .rise, .player[open] { animation: none; }
-  .btn, .card, .chip, .text-link .icon, .abstract summary::before, .pub h3 a, .watch, .watch-thumb img, .play { transition: none; }
-  .watch:hover .watch-thumb img, .watch:hover .play { transform: none; }
+  .btn, .card, .chip, .text-link .icon, .abstract summary::before, .pub h3 a, .watch, .watch-thumb img, .play, .card-media-frame img { transition: none; }
+  .watch:hover .watch-thumb img, .watch:hover .play, .card-media:hover .card-media-frame img, .card-media:hover .play { transform: none; }
 }
 
 /* --- Smaller screens ------------------------------------------------------ */
@@ -305,6 +322,8 @@ cite { font: italic 400 1.07em/1.4 var(--font-display); color: var(--ink); }
   .hero .container { grid-template-columns: 1fr; gap: 56px; }
   .portrait { max-width: 420px; }
   .cards { grid-template-columns: 1fr; }
+  .card.featured { grid-template-columns: 1fr; gap: 28px; padding: 30px 28px 26px; }
+  .card-media { max-width: 480px; }
   .split, .block > .container { grid-template-columns: 1fr; gap: 28px; }
   .block-title { position: static; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
